@@ -4,7 +4,7 @@ import faiss
 import numpy as np
 import json
 from sentence_transformers import SentenceTransformer
-from app.config import VECTOR_INDEX_DIR
+from backend.app.config import VECTOR_INDEX_DIR
 
 os.makedirs(VECTOR_INDEX_DIR, exist_ok=True)
 
