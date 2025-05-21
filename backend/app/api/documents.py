@@ -1,6 +1,6 @@
 # backend/app/api/documents.py
 from fastapi import APIRouter
-from app.services.vector_db import metadata  # your metadata list
+from backend.app.services.vector_db import metadata  # your metadata list
 
 router = APIRouter()
 
