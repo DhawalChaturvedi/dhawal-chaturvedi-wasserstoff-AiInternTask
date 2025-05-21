@@ -10,4 +10,11 @@ pillow
 pytesseract
 python-multipart
 anthropic
+langchain
+langchain-openai
+openai
+requests
+typing-extensions
+PyMuPDF
+
 
