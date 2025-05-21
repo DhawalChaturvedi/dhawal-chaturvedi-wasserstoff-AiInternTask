@@ -1,9 +1,9 @@
 from fastapi import APIRouter, Query
 from pydantic import BaseModel
 from typing import Optional
-from app.services.vector_db import search, search_in_document, get_all_chunks
-from app.services.theme_synthesis import identify_themes
-from app.services.theme import cluster_texts_with_citations
+from backend.app.services.vector_db import search, search_in_document, get_all_chunks
+from backend.app.services.theme_synthesis import identify_themes
+from backend.app.services.theme import cluster_texts_with_citations
 
 router = APIRouter()
 
