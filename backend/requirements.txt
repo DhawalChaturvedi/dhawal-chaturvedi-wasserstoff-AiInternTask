@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+python-multipart
+requests
+aiofiles
+pydantic
+numpy
+scikit-learn
+transformers
+torch
+python-dotenv

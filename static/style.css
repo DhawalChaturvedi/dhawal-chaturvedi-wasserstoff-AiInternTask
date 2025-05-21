@@ -1,0 +1,228 @@
+/* Reset and base */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: #202123;
+  color: #e5e5e5;
+  height: 100vh;
+  display: block; /* removed flex centering */
+}
+
+.chat-container {
+  background: #343541;
+  width: 100vw;      /* full viewport width */
+  height: 100vh;     /* full viewport height */
+  max-width: none;   /* removed max-width */
+  border-radius: 0;  /* removed rounded corners */
+  box-shadow: none;  /* removed shadow */
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  padding: 20px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #444654;
+  background: #202123;
+  color: #ececf1;
+  user-select: none;
+}
+
+/* Chat messages area */
+.chat-window {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background: #202123;
+  scrollbar-width: thin;
+  scrollbar-color: #5a5a5a transparent;
+}
+
+.chat-window::-webkit-scrollbar {
+  width: 8px;
+}
+
+.chat-window::-webkit-scrollbar-thumb {
+  background-color: #5a5a5a;
+  border-radius: 4px;
+}
+
+/* Individual messages */
+.message {
+  margin-bottom: 16px;
+  max-width: 80%;
+  padding: 12px 16px;
+  border-radius: 12px;
+  line-height: 1.5;
+  font-size: 15px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.message.user {
+  background: #10a37f;
+  color: white;
+  margin-left: auto;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 12px;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.message.bot {
+  background: #444654;
+  color: #e5e5e5;
+  margin-right: auto;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 12px;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+}
+
+/* Input container */
+.input-container {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  background: #343541;
+  border-top: 1px solid #444654;
+}
+
+.input-container input,
+.input-container select {
+  flex: 1;
+  padding: 12px 16px;
+  font-size: 15px;
+  border: none;
+  border-radius: 8px;
+  background: #202123;
+  color: #e5e5e5;
+  outline: none;
+}
+
+.input-container input::placeholder {
+  color: #8b8b8b;
+}
+
+.input-container button {
+  background: #10a37f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.input-container button:hover {
+  background: #0e896a;
+}
+
+/* Theme button style */
+#theme-btn {
+  background: #5865f2;
+}
+
+#theme-btn:hover {
+  background: #4752c4;
+}
+
+/* Synthesize button style */
+#synthesize-btn {
+  background: #d97e00;
+}
+
+#synthesize-btn:hover {
+  background: #b06600;
+}
+
+/* Upload container */
+.upload-container {
+  display: flex;
+  gap: 8px;
+  padding: 12px 16px;
+  border-top: 1px solid #444654;
+  background: #2a2a37;
+}
+
+.upload-container input[type="file"] {
+  flex: 1;
+  color: transparent;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.upload-container button {
+  background: #5865f2;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 15px;
+  transition: background-color 0.2s ease;
+}
+
+.upload-container button:hover {
+  background: #4752c4;
+}
+
+/* Results container */
+#query-results {
+  padding: 12px 16px;
+  background: #202123;
+  color: #ccc;
+  font-size: 14px;
+  overflow-y: auto;
+  max-height: 120px;
+  border-top: 1px solid #444654;
+  border-radius: 0 0 12px 12px;
+}
+
+/* Table styling inside messages (for your results) */
+.message.bot table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.message.bot th, .message.bot td {
+  border: 1px solid #555;
+  padding: 6px 8px;
+}
+
+.message.bot th {
+  background: #343541;
+  color: #a5a5a5;
+  font-weight: 600;
+}
+
+/* Scrollbar styles for better UX */
+#query-results::-webkit-scrollbar {
+  height: 6px;
+}
+
+#query-results::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 3px;
+}
+
+#file-names {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #888;
+  font-style: italic;
+  max-height: 4rem;
+  overflow-y: auto;
+}
