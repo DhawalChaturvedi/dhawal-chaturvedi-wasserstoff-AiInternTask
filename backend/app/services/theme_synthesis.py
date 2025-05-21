@@ -1,4 +1,4 @@
-from app.services.grok_api import grok_chat_completion
+from backend.app.services.grok_api import grok_chat_completion
 
 # Template prompt for Grok model to summarize themes and cite documents
 THEME_PROMPT_TEMPLATE = """
