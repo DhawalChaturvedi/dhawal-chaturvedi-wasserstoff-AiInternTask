@@ -3,7 +3,7 @@ from pdf2image import convert_from_path
 from PIL import Image
 import io
 import os
-from app.services.vector_db import store_text_chunks  
+from backend.app.services.vector_db import store_text_chunks  
 
 #path to the poppler file 
 POPPLER_PATH = r"C:\Program Files\poppler-24.08.0\Library\bin"
