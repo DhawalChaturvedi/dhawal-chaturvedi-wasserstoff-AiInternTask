@@ -1,6 +1,6 @@
 from sklearn.cluster import KMeans
 from langchain_openai import OpenAIEmbeddings
-from app.config import OPENAI_API_KEY
+from backend.app.config import OPENAI_API_KEY
 import numpy as np
 
 # Initialize OpenAI embedding model 
