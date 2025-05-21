@@ -6,7 +6,7 @@ The main file which executes the programs and loads all the necessary files
 from fastapi import FastAPI
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
-from app.api import upload, query
+from backend.app.api import upload, query
 from app.api.documents import router as documents_router
 import os
 
