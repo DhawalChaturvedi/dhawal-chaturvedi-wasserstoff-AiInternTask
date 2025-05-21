@@ -6,11 +6,11 @@ from typing import List
 from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 from sqlalchemy.orm import Session
 
-from app.config import UPLOAD_DIR
-from app.core.db import get_db
-from app.models.document import Document
-from app.services.ocr import extract_text_from_pdf, extract_text_from_image
-from app.services.vector_db import store_text_chunks
+from backend.app.config import UPLOAD_DIR
+from backend.app.core.db import get_db
+from backend.app.models.document import Document
+from backend.app.services.ocr import extract_text_from_pdf, extract_text_from_image
+from backend.app.services.vector_db import store_text_chunks
 
 router = APIRouter()              
 
