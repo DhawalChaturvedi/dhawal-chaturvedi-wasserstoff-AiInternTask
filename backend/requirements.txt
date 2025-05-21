@@ -1,11 +1,10 @@
 fastapi
 uvicorn
-python-multipart
-requests
-aiofiles
+sqlalchemy
 pydantic
-numpy
-scikit-learn
-transformers
-torch
 python-dotenv
+faiss-cpu
+sentence-transformers
+pdf2image
+pillow
+pytesseract
